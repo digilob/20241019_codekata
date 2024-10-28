@@ -38,7 +38,7 @@ public class ISBNRadixSort {
 
     // Counting sort based on the digit at a specific position
     private static void countingSortByDigit(List<String> isbnList, int pos) {
-       // Set up data structures for counting sort
+       // Set up data
         int n = isbnList.size();
         List<String> output = new ArrayList<>(Collections.nCopies(n, "")); // Output list
         int[] count = new int[10]; // To store count of digits 0-9
@@ -47,7 +47,6 @@ public class ISBNRadixSort {
 
 
         // Step 2: Update count array to store cumulative counts
-
 
 
         // Step 3: Build the output array in stable order

@@ -38,33 +38,23 @@ public class ISBNRadixSort {
 
     // Counting sort based on the digit at a specific position
     private static void countingSortByDigit(List<String> isbnList, int pos) {
+       // Set up data structures for counting sort
         int n = isbnList.size();
         List<String> output = new ArrayList<>(Collections.nCopies(n, "")); // Output list
         int[] count = new int[10]; // To store count of digits 0-9
 
         // Step 1: Count occurrences of each digit at position `pos`
-        for (String isbn : isbnList) {
-            int digit = getDigitAtPos(isbn, pos);
-            count[digit]++;
-        }
+
 
         // Step 2: Update count array to store cumulative counts
-        for (int i = 1; i < 10; i++) {
-            count[i] += count[i - 1];
-        }
+
+
 
         // Step 3: Build the output array in stable order
-        for (int i = n - 1; i >= 0; i--) {
-            String isbn = isbnList.get(i);
-            int digit = getDigitAtPos(isbn, pos);
-            output.set(count[digit] - 1, isbn);
-            count[digit]--;
-        }
+
 
         // Step 4: Copy the sorted ISBNs back into the original list
-        for (int i = 0; i < n; i++) {
-            isbnList.set(i, output.get(i));
-        }
+
     }
 
     // Helper method to get the digit at a specific position in the ISBN string

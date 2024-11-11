@@ -32,7 +32,7 @@ Your task is to implement a function that solves the given problem. The problem 
     ```
 3. Push your changes to the repository:
     ```bash
-    git push origin main
+    git push origin master
     ```
 
 Good luck, and happy coding!
